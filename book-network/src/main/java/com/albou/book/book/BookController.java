@@ -100,9 +100,9 @@ public class BookController {
             @Parameter()
             @RequestPart("file") MultipartFile file,
             Authentication connectedUser
-            ){
-        service.uploadBookCoverPicture(file,connectedUser,bookId);
-        return ResponseEntity.ok("Cover updated correctly");
+    ) {
+        service.uploadBookCoverPicture(file, connectedUser, bookId);
+        return ResponseEntity.accepted().build();
     }
 
 }

@@ -1,20 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { PageResponseBookResponse } from '../../../../services/models/page-response-book-response';
 import { BookService } from '../../../../services/services';
-import {  Router } from '@angular/router';
-import { BookResponse, PageResponseBookResponse } from '../../../../services/models';
+import { Router } from '@angular/router';
+import { BookResponse } from '../../../../services/models';
 
 @Component({
-  selector: 'app-book-list',
-  templateUrl: './book-list.component.html',
-  styleUrl: './book-list.component.scss'
+  selector: 'app-my-books',
+  templateUrl: './my-books.component.html',
+  styleUrl: './my-books.component.scss'
 })
-export class BookListComponent implements OnInit{
-
+export class MyBooksComponent implements OnInit {
 
   page = 0;
   size = 1;
-  message = '';
-  level = 'success';
   bookResponse: PageResponseBookResponse ={};
 
   constructor(
@@ -27,7 +25,7 @@ export class BookListComponent implements OnInit{
   }
 
   findAllBooks() {
-    this.bookService.findAllBooks({
+    this.bookService.findAllBooksByOwner({
       page: this.page, size: this.size
     }).subscribe({
       next: (books) =>{
@@ -60,22 +58,14 @@ export class BookListComponent implements OnInit{
     return this.page == this.bookResponse.totalPages as number -1;
    }
 
-
-   borrowBook(book: BookResponse) {
-    this.message = '';
-    this.bookService.borrowBook({
-      "book-id": book.id as number
-    }).subscribe({
-      next:() => {
-        this.level = 'success';
-        this.message = "Book successfully borrowed";
-      },
-      error: (err) => {
-        console.log(err);
-        this.level = 'error';
-        this.message = err.error.error;
-      }
-    });
+   archiveBook(book: BookResponse) {
+    throw new Error('Method not implemented.');
+    }
+    shareBook(book: BookResponse) {
+    throw new Error('Method not implemented.');
+    }
+    editBook(book: BookResponse) {
+    throw new Error('Method not implemented.');
     }
 
 }
