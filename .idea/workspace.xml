@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eae2e780-2a2b-45cd-8670-c478f6daa9c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/book-network-ui/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/.vscode/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/app.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/modules/book/components/book-card/book-card.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/modules/book/components/book-card/book-card.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/modules/book/components/book-card/book-card.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/modules/book/components/book-card/book-card.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/modules/book/pages/book-list/book-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/modules/book/pages/book-list/book-list.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/modules/book/pages/book-list/book-list.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/modules/book/pages/book-list/book-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/pages/register/register.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/pages/register/register.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/pages/register/register.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/pages/register/register.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/api-configuration.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/api.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/base-service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/authentication/authenticate.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/authentication/confirm.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/authentication/register.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/book/borrow-book.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/book/find-all-books-by-owner.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/book/find-all-books.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/book/find-all-borrowed-books.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/book/find-all-returned-books.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/book/find-book-by-id.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/book/return-borrow-book.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/book/save-book.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/book/update-archived-status.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/book/update-shareable-status.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/book/upload-book-cover-picture.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/feedback/fin-all-feedback-by-book.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/fn/feedback/save-feedback.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/interceptor/http-token.interceptor.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/interceptor/http-token.interceptor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/models.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/models/autentication-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/models/authentication-response.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/models/book-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/models/book-response.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/models/borrowed-books-response.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/models/feedback-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/models/feedback-response.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/models/page-response-book-response.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/models/page-response-borrowed-books-response.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/models/page-response-feedback-response.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/models/registration-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/request-builder.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/services/authentication.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/services/book.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/services/feedback.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/strict-http-response.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/token/token.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/app/services/token/token.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/openapi/openapi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/src/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-network-ui/tsconfig.spec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-network/src/main/java/com/albou/book/auth/RegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-network/src/main/java/com/albou/book/auth/RegistrationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-network/src/main/java/com/albou/book/book/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-network/src/main/java/com/albou/book/book/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-network/src/main/java/com/albou/book/book/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-network/src/main/java/com/albou/book/book/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-network/src/main/java/com/albou/book/config/BeansConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-network/src/main/java/com/albou/book/config/BeansConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-network/src/main/java/com/albou/book/file/FileStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-network/src/main/java/com/albou/book/file/FileStorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-network/src/main/java/com/albou/book/history/BookTransactionHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-network/src/main/java/com/albou/book/history/BookTransactionHistoryRepository.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2g6hgJilhq4RsUKxNjPHjRcbQzb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.BookNetworkApplication">
+    <configuration name="BookNetworkApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.albou.book.BookNetworkApplication" />
+      <module name="book-network" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.albou.book.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="book-network: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="book-network/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BookNetworkApplication" />
+        <item itemvalue="Docker.book-network: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eae2e780-2a2b-45cd-8670-c478f6daa9c4" name="Changes" comment="" />
+      <created>1715024046596</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715024046596</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
