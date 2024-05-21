@@ -1,17 +1,17 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "OpenApi specification - Pablo",
-    "description": "OpenAPi DOcumentation for Spring Security",
-    "termsOfService": "Terminos d servicio",
+    "title": "OpenApi specification - Alibou",
+    "description": "OpenApi documentation for Spring Security",
+    "termsOfService": "Terms of service",
     "contact": {
-      "name": "Pablo",
-      "url": "https://pablomagna.github.io/",
-      "email": "pmagnavach@gmail.com"
+      "name": "Alibou",
+      "url": "https://aliboucoding.com/course",
+      "email": "contact@aliboucoding.com"
     },
     "license": {
-      "name": "nombre licencia",
-      "url": "licencia.com"
+      "name": "Licence name",
+      "url": "https://some-url.com"
     },
     "version": "1.0"
   },
@@ -21,7 +21,7 @@
       "description": "Local ENV"
     },
     {
-      "url": "http de la url en producción",
+      "url": "https://aliboucoding.com/course",
       "description": "PROD ENV"
     }
   ],
@@ -65,7 +65,7 @@
     "/books": {
       "get": {
         "tags": [
-          "book"
+          "Book"
         ],
         "operationId": "findAllBooks",
         "parameters": [
@@ -105,7 +105,7 @@
       },
       "post": {
         "tags": [
-          "book"
+          "Book"
         ],
         "operationId": "saveBook",
         "requestBody": {
@@ -136,7 +136,7 @@
     "/books/cover/{book-id}": {
       "post": {
         "tags": [
-          "book"
+          "Book"
         ],
         "operationId": "uploadBookCoverPicture",
         "parameters": [
@@ -185,7 +185,7 @@
     "/books/borrow/{book-id}": {
       "post": {
         "tags": [
-          "book"
+          "Book"
         ],
         "operationId": "borrowBook",
         "parameters": [
@@ -254,7 +254,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AutenticationRequest"
+                "$ref": "#/components/schemas/AuthenticationRequest"
               }
             }
           },
@@ -277,7 +277,7 @@
     "/books/shareable/{book-id}": {
       "patch": {
         "tags": [
-          "book"
+          "Book"
         ],
         "operationId": "updateShareableStatus",
         "parameters": [
@@ -309,9 +309,41 @@
     "/books/borrow/return/{book-id}": {
       "patch": {
         "tags": [
-          "book"
+          "Book"
         ],
         "operationId": "returnBorrowBook",
+        "parameters": [
+          {
+            "name": "book-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/books/borrow/return/approve/{book-id}": {
+      "patch": {
+        "tags": [
+          "Book"
+        ],
+        "operationId": "approveReturnBorrowBook",
         "parameters": [
           {
             "name": "book-id",
@@ -341,7 +373,7 @@
     "/books/archived/{book-id}": {
       "patch": {
         "tags": [
-          "book"
+          "Book"
         ],
         "operationId": "updateArchivedStatus",
         "parameters": [
@@ -375,7 +407,7 @@
         "tags": [
           "Feedback"
         ],
-        "operationId": "finAllFeedbackByBook",
+        "operationId": "findAllFeedbacksByBook",
         "parameters": [
           {
             "name": "book-id",
@@ -424,7 +456,7 @@
     "/books/{book-id}": {
       "get": {
         "tags": [
-          "book"
+          "Book"
         ],
         "operationId": "findBookById",
         "parameters": [
@@ -455,7 +487,7 @@
     "/books/returned": {
       "get": {
         "tags": [
-          "book"
+          "Book"
         ],
         "operationId": "findAllReturnedBooks",
         "parameters": [
@@ -486,7 +518,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PageResponseBorrowedBooksResponse"
+                  "$ref": "#/components/schemas/PageResponseBorrowedBookResponse"
                 }
               }
             }
@@ -497,7 +529,7 @@
     "/books/owner": {
       "get": {
         "tags": [
-          "book"
+          "Book"
         ],
         "operationId": "findAllBooksByOwner",
         "parameters": [
@@ -539,7 +571,7 @@
     "/books/borrowed": {
       "get": {
         "tags": [
-          "book"
+          "Book"
         ],
         "operationId": "findAllBorrowedBooks",
         "parameters": [
@@ -570,7 +602,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PageResponseBorrowedBooksResponse"
+                  "$ref": "#/components/schemas/PageResponseBorrowedBookResponse"
                 }
               }
             }
@@ -681,7 +713,7 @@
           }
         }
       },
-      "AutenticationRequest": {
+      "AuthenticationRequest": {
         "required": [
           "email",
           "password"
@@ -828,7 +860,7 @@
           }
         }
       },
-      "BorrowedBooksResponse": {
+      "BorrowedBookResponse": {
         "type": "object",
         "properties": {
           "id": {
@@ -851,18 +883,18 @@
           "returned": {
             "type": "boolean"
           },
-          "returnedApproved": {
+          "returnApproved": {
             "type": "boolean"
           }
         }
       },
-      "PageResponseBorrowedBooksResponse": {
+      "PageResponseBorrowedBookResponse": {
         "type": "object",
         "properties": {
           "content": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/BorrowedBooksResponse"
+              "$ref": "#/components/schemas/BorrowedBookResponse"
             }
           },
           "number": {

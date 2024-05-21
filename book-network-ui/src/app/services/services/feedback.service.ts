@@ -9,8 +9,8 @@ import { BaseService } from '../base-service';
 import { ApiConfiguration } from '../api-configuration';
 import { StrictHttpResponse } from '../strict-http-response';
 
-import { finAllFeedbackByBook } from '../fn/feedback/fin-all-feedback-by-book';
-import { FinAllFeedbackByBook$Params } from '../fn/feedback/fin-all-feedback-by-book';
+import { findAllFeedbacksByBook } from '../fn/feedback/find-all-feedbacks-by-book';
+import { FindAllFeedbacksByBook$Params } from '../fn/feedback/find-all-feedbacks-by-book';
 import { PageResponseFeedbackResponse } from '../models/page-response-feedback-response';
 import { saveFeedback } from '../fn/feedback/save-feedback';
 import { SaveFeedback$Params } from '../fn/feedback/save-feedback';
@@ -46,27 +46,27 @@ export class FeedbackService extends BaseService {
     );
   }
 
-  /** Path part for operation `finAllFeedbackByBook()` */
-  static readonly FinAllFeedbackByBookPath = '/feedbacks/book/{book-id}';
+  /** Path part for operation `findAllFeedbacksByBook()` */
+  static readonly FindAllFeedbacksByBookPath = '/feedbacks/book/{book-id}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
-   * To access only the response body, use `finAllFeedbackByBook()` instead.
+   * To access only the response body, use `findAllFeedbacksByBook()` instead.
    *
    * This method doesn't expect any request body.
    */
-  finAllFeedbackByBook$Response(params: FinAllFeedbackByBook$Params, context?: HttpContext): Observable<StrictHttpResponse<PageResponseFeedbackResponse>> {
-    return finAllFeedbackByBook(this.http, this.rootUrl, params, context);
+  findAllFeedbacksByBook$Response(params: FindAllFeedbacksByBook$Params, context?: HttpContext): Observable<StrictHttpResponse<PageResponseFeedbackResponse>> {
+    return findAllFeedbacksByBook(this.http, this.rootUrl, params, context);
   }
 
   /**
    * This method provides access only to the response body.
-   * To access the full response (for headers, for example), `finAllFeedbackByBook$Response()` instead.
+   * To access the full response (for headers, for example), `findAllFeedbacksByBook$Response()` instead.
    *
    * This method doesn't expect any request body.
    */
-  finAllFeedbackByBook(params: FinAllFeedbackByBook$Params, context?: HttpContext): Observable<PageResponseFeedbackResponse> {
-    return this.finAllFeedbackByBook$Response(params, context).pipe(
+  findAllFeedbacksByBook(params: FindAllFeedbacksByBook$Params, context?: HttpContext): Observable<PageResponseFeedbackResponse> {
+    return this.findAllFeedbacksByBook$Response(params, context).pipe(
       map((r: StrictHttpResponse<PageResponseFeedbackResponse>): PageResponseFeedbackResponse => r.body)
     );
   }

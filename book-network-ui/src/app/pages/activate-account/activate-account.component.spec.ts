@@ -6,12 +6,10 @@ describe('ActivateAccountComponent', () => {
   let component: ActivateAccountComponent;
   let fixture: ComponentFixture<ActivateAccountComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       declarations: [ActivateAccountComponent]
-    })
-    .compileComponents();
-    
+    });
     fixture = TestBed.createComponent(ActivateAccountComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

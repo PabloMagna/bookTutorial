@@ -9,6 +9,8 @@ import { BaseService } from '../base-service';
 import { ApiConfiguration } from '../api-configuration';
 import { StrictHttpResponse } from '../strict-http-response';
 
+import { approveReturnBorrowBook } from '../fn/book/approve-return-borrow-book';
+import { ApproveReturnBorrowBook$Params } from '../fn/book/approve-return-borrow-book';
 import { BookResponse } from '../models/book-response';
 import { borrowBook } from '../fn/book/borrow-book';
 import { BorrowBook$Params } from '../fn/book/borrow-book';
@@ -23,7 +25,7 @@ import { FindAllReturnedBooks$Params } from '../fn/book/find-all-returned-books'
 import { findBookById } from '../fn/book/find-book-by-id';
 import { FindBookById$Params } from '../fn/book/find-book-by-id';
 import { PageResponseBookResponse } from '../models/page-response-book-response';
-import { PageResponseBorrowedBooksResponse } from '../models/page-response-borrowed-books-response';
+import { PageResponseBorrowedBookResponse } from '../models/page-response-borrowed-book-response';
 import { returnBorrowBook } from '../fn/book/return-borrow-book';
 import { ReturnBorrowBook$Params } from '../fn/book/return-borrow-book';
 import { saveBook } from '../fn/book/save-book';
@@ -195,6 +197,31 @@ export class BookService extends BaseService {
     );
   }
 
+  /** Path part for operation `approveReturnBorrowBook()` */
+  static readonly ApproveReturnBorrowBookPath = '/books/borrow/return/approve/{book-id}';
+
+  /**
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `approveReturnBorrowBook()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  approveReturnBorrowBook$Response(params: ApproveReturnBorrowBook$Params, context?: HttpContext): Observable<StrictHttpResponse<number>> {
+    return approveReturnBorrowBook(this.http, this.rootUrl, params, context);
+  }
+
+  /**
+   * This method provides access only to the response body.
+   * To access the full response (for headers, for example), `approveReturnBorrowBook$Response()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  approveReturnBorrowBook(params: ApproveReturnBorrowBook$Params, context?: HttpContext): Observable<number> {
+    return this.approveReturnBorrowBook$Response(params, context).pipe(
+      map((r: StrictHttpResponse<number>): number => r.body)
+    );
+  }
+
   /** Path part for operation `updateArchivedStatus()` */
   static readonly UpdateArchivedStatusPath = '/books/archived/{book-id}';
 
@@ -254,7 +281,7 @@ export class BookService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  findAllReturnedBooks$Response(params?: FindAllReturnedBooks$Params, context?: HttpContext): Observable<StrictHttpResponse<PageResponseBorrowedBooksResponse>> {
+  findAllReturnedBooks$Response(params?: FindAllReturnedBooks$Params, context?: HttpContext): Observable<StrictHttpResponse<PageResponseBorrowedBookResponse>> {
     return findAllReturnedBooks(this.http, this.rootUrl, params, context);
   }
 
@@ -264,9 +291,9 @@ export class BookService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  findAllReturnedBooks(params?: FindAllReturnedBooks$Params, context?: HttpContext): Observable<PageResponseBorrowedBooksResponse> {
+  findAllReturnedBooks(params?: FindAllReturnedBooks$Params, context?: HttpContext): Observable<PageResponseBorrowedBookResponse> {
     return this.findAllReturnedBooks$Response(params, context).pipe(
-      map((r: StrictHttpResponse<PageResponseBorrowedBooksResponse>): PageResponseBorrowedBooksResponse => r.body)
+      map((r: StrictHttpResponse<PageResponseBorrowedBookResponse>): PageResponseBorrowedBookResponse => r.body)
     );
   }
 
@@ -304,7 +331,7 @@ export class BookService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  findAllBorrowedBooks$Response(params?: FindAllBorrowedBooks$Params, context?: HttpContext): Observable<StrictHttpResponse<PageResponseBorrowedBooksResponse>> {
+  findAllBorrowedBooks$Response(params?: FindAllBorrowedBooks$Params, context?: HttpContext): Observable<StrictHttpResponse<PageResponseBorrowedBookResponse>> {
     return findAllBorrowedBooks(this.http, this.rootUrl, params, context);
   }
 
@@ -314,9 +341,9 @@ export class BookService extends BaseService {
    *
    * This method doesn't expect any request body.
    */
-  findAllBorrowedBooks(params?: FindAllBorrowedBooks$Params, context?: HttpContext): Observable<PageResponseBorrowedBooksResponse> {
+  findAllBorrowedBooks(params?: FindAllBorrowedBooks$Params, context?: HttpContext): Observable<PageResponseBorrowedBookResponse> {
     return this.findAllBorrowedBooks$Response(params, context).pipe(
-      map((r: StrictHttpResponse<PageResponseBorrowedBooksResponse>): PageResponseBorrowedBooksResponse => r.body)
+      map((r: StrictHttpResponse<PageResponseBorrowedBookResponse>): PageResponseBorrowedBookResponse => r.body)
     );
   }
 

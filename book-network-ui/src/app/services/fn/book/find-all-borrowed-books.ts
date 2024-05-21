@@ -6,14 +6,14 @@ import { filter, map } from 'rxjs/operators';
 import { StrictHttpResponse } from '../../strict-http-response';
 import { RequestBuilder } from '../../request-builder';
 
-import { PageResponseBorrowedBooksResponse } from '../../models/page-response-borrowed-books-response';
+import { PageResponseBorrowedBookResponse } from '../../models/page-response-borrowed-book-response';
 
 export interface FindAllBorrowedBooks$Params {
   page?: number;
   size?: number;
 }
 
-export function findAllBorrowedBooks(http: HttpClient, rootUrl: string, params?: FindAllBorrowedBooks$Params, context?: HttpContext): Observable<StrictHttpResponse<PageResponseBorrowedBooksResponse>> {
+export function findAllBorrowedBooks(http: HttpClient, rootUrl: string, params?: FindAllBorrowedBooks$Params, context?: HttpContext): Observable<StrictHttpResponse<PageResponseBorrowedBookResponse>> {
   const rb = new RequestBuilder(rootUrl, findAllBorrowedBooks.PATH, 'get');
   if (params) {
     rb.query('page', params.page, {});
@@ -25,7 +25,7 @@ export function findAllBorrowedBooks(http: HttpClient, rootUrl: string, params?:
   ).pipe(
     filter((r: any): r is HttpResponse<any> => r instanceof HttpResponse),
     map((r: HttpResponse<any>) => {
-      return r as StrictHttpResponse<PageResponseBorrowedBooksResponse>;
+      return r as StrictHttpResponse<PageResponseBorrowedBookResponse>;
     })
   );
 }
